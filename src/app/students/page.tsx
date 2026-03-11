@@ -1,7 +1,7 @@
 "use client"
 import { students } from "@/data/students"
-import { addDebtStudent } from "@/store/debtSlice"
-import { useAppDispatch, useAppSelector } from "@/store/hooks"
+import { useAppDispatch, useAppSelector } from "@/hook"
+import { addToDebt } from "@/store/debtSlice"
 import Link from "next/link"
 
 const Students = () => {
@@ -36,7 +36,7 @@ const Students = () => {
                   <span className="text-xs text-red-500 font-medium">
                     Qarzi: {item.debt.toLocaleString()} so'm
                   </span>
-                  <button onClick={() => dispatch(addDebtStudent(item))} disabled={isInDebt} className={`text-xs px-3 py-1 rounded-full border transition duration-200 ${ isInDebt ? "border-gray-300 text-gray-400 cursor-not-allowed" : "border-red-500 text-red-500 hover:bg-red-500 hover:text-white cursor-pointer" }`} >
+                  <button onClick={() => dispatch(addToDebt(item))} disabled={isInDebt} className={`text-xs px-3 py-1 rounded-full border transition duration-200 ${ isInDebt ? "border-gray-300 text-gray-400 cursor-not-allowed" : "border-red-500 text-red-500 hover:bg-red-500 hover:text-white cursor-pointer" }`} >
                     {isInDebt ? "Qo'shilgan ✓" : "Qarzdorga qo'shish"}
                   </button>
                 </div>

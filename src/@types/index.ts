@@ -21,3 +21,7 @@ export interface StudentType {
   debt: number
   address: string
 }
+
+export interface DebtState {
+  debtStudents: StudentType[]
+}

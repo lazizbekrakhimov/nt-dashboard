@@ -1,6 +1,6 @@
 "use client"
-import { removeDebtStudent } from "@/store/debtSlice"
-import { useAppDispatch, useAppSelector } from "@/store/hooks"
+import { useAppDispatch, useAppSelector } from "@/hook"
+import { removeToDebt } from "@/store/debtSlice"
 import Link from "next/link"
 
 const DebtStudents = () => {
@@ -40,7 +40,7 @@ const DebtStudents = () => {
                 <p className="text-sm text-red-600 font-semibold mt-2">
                 Qarzi: {item.debt.toLocaleString()} so'm
               </p>
-              <button onClick={() => dispatch(removeDebtStudent(item.id))} className="px-3 py-1.5 mt-2 border border-red-500 rounded-full bg-red-500 text-white hover:bg-red-50 hover:text-red-500 transition duration-300 text-xs cursor-pointer" >
+              <button onClick={() => dispatch(removeToDebt(item.id))} className="px-3 py-1.5 mt-2 border border-red-500 rounded-full bg-red-500 text-white hover:bg-red-50 hover:text-red-500 transition duration-300 text-xs cursor-pointer" >
                 Ro'yxatdan chiqarish ✕
               </button>
               </div>

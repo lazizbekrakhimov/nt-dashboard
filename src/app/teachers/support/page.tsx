@@ -2,7 +2,7 @@ import { teachers } from "@/data/teachers"
 import TeacherCard from "@/components/TeacherCard"
 
 const SupportTeachers = () => {
-  const supportTeachers = teachers.filter((t) => t.type === "support")
+  const supportTeachers = teachers.filter((item) => item.type === "support")
 
   return (
     <div className="min-h-screen bg-white text-black p-10 pt-6">
